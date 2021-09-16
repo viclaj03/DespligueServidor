@@ -6,5 +6,5 @@ if (is_null($nom)){
 echo $nom ;
 echo '<br>';
 echo  trim($nom,"/");
-echo
+
 

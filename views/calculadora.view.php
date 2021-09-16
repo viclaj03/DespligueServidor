@@ -10,7 +10,7 @@
     echo " Resta: $x - $y = $resta" . '<br/>';
     echo " Multiplicacion: $x x $y = $multiplicacion" . '<br/>';
     echo " Division: $x / $y = $division" . '<br/>';
-    echo print_r($_SERVER);?>
+    ?>
 </p>
 <p><?php print_r($_SERVER['SERVER_ADDR'])?></p>
 <p><?php print_r($_SERVER['QUERY_STRING'])?></p>
