@@ -62,8 +62,8 @@
     $paraules = array('queso' => 'cheese', 'ajedrez' => 'Chess', 'ciudad'=>'town', 'caballo'=>'horse','bici'=>'bike'
     ,'silla'=>'chair','coche'=>'car','manzana'=> 'apple','zorro'=>'fox','pelicula'=>'movie' );
 
-    foreach($paraules as $traduciones => $English){
-        echo "$English = $traduciones" . '<br/>';
+    foreach($paraules as $Spanish => $English){
+        echo "$English = $Spanish" . '<br/>';
     }
     ?>
 
