@@ -1,5 +1,6 @@
 <?php
     require_once("../kernel.php");
+    hola;
     $greetings = 'Hola ' .$_GET['name'];
     $names = ["jj","LL"];
     $names[] = 'Pepe';
