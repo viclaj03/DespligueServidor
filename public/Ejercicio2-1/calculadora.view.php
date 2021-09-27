@@ -20,6 +20,5 @@
     </select>
     <input type="submit" value="Enviar">
 </form>
-<p><?=$resultado?></p>
 </body>
 </html>
