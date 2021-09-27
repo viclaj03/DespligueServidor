@@ -4,7 +4,7 @@ $x = $_POST['num1'];
 $y = $_POST['num2'];
 $operacion = $_POST['operacion'];
 
-if ($x === "" || is_null($y) || ($operacion != 'suma' && $operacion != 'resta'
+if ($x === "" || $y ==="" || ($operacion != 'suma' && $operacion != 'resta'
         && $operacion != 'multiplicacion' && $operacion != 'division')) {
     $resultado = "Debes introducir los valores y el tipo de operacion";
 } else {
@@ -26,10 +26,10 @@ function resta($x,$y){
     return $x - $y;
 }
 
-function multiplicacio($x,$y){
+function multiplicacion($x,$y){
     return $x * $y;
 }
 
-function divisio($x,$y){
+function division($x,$y){
     return $x / $y;
 }
