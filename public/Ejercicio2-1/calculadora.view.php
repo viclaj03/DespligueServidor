@@ -19,5 +19,7 @@
         <option value="division">Division</option>
     </select>
     <input type="submit" value="Enviar">
-    <?=$resultado?>
 </form>
+<p><?=$resultado?></p>
+</body>
+</html>
