@@ -1,6 +1,5 @@
 <?php
-$fp = fopen("Atletic.csv", "r");
-$plantilla = [];
+
 $arrayJuagadores = csvtoarray("Atletic.csv",",");
 array_multisort(array_column($arrayJuagadores, 11), SORT_ASC, $arrayJuagadores);
 mostrarJugadores($arrayJuagadores);
