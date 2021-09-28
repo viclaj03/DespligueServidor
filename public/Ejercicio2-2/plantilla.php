@@ -42,5 +42,3 @@ function csvtoarray($archivo,$delimitador){
         return false;
     }
 }
-
-
