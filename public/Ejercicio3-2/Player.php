@@ -1,16 +1,12 @@
 <?php
-
-class Player{
-    private $name;
-    private $birthDay;
-    private $country;
+require_once ('Member.php');
+class Player extends Member
+{
     private $dorsal;
     private $position;
     private $goals;
     private $matches;
     private $minutes;
-    private $yellowCard;
-    private $redCard;
 
     public function __construct($name, $birthDay, $country, $dorsal, $position, $goals, $matches, $minutes, $yellowCard, $redCard)
     {
@@ -26,26 +22,8 @@ class Player{
         $this->redCard = $redCard;
     }
 
-    public function age(){
-        list($dia,$mes,$ano) = explode("/",$this->birthDay);
-        $ano_diferencia  = date("Y") - $ano;
-        $mes_diferencia = date("m") - $mes;
-        $dia_diferencia   = date("d") - $dia;
-        if ($dia_diferencia < 0 || $mes_diferencia < 0)
-            $ano_diferencia--;
-        return $ano_diferencia;
-    }
-
     public function score(){
         $this->goals += 1;
-    }
-
-    public function addCard($colour){
-        if ($colour === "redCard") {
-            $this->redCard += 1;
-        } else if ($colour === "yellowCard") {
-            $this->yellowCard += 1;
-        }
     }
 
     public function playMinutes($min){
@@ -59,7 +37,7 @@ class Player{
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
-                        <div class="card-body p-4">
+                        <div class="card-body p-4" style="background-color: yellow">
                             <div class="text-center">
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">' . $this->name . '</h5>
@@ -67,7 +45,7 @@ class Player{
                                 <div class="d-flex justify-content-center small text-warning mb-2">
                                 </div>
                                 <!-- Product price-->
-                                <p>Birthday: ' . $this->birthDay . '</p>
+                                <p>Edad: ' . $this->age() . '</p>
                                 <p>Country: ' . $this->country . '</p>
                                 <p>Dorsal: ' . $this->dorsal . '</p>
                                 <p>Position: ' . $this->position . '</p>
@@ -82,6 +60,3 @@ class Player{
                 </div>';
     }
 }
-
-
-
