@@ -1,12 +1,14 @@
 <?php
+require ("Member.php");
 require ("Player.php");
 require ("Team.php");
 require ("Trainer.php");
 
 $juagadores = csvtoClass("Atletic.csv",",");
 $entrenador = new Trainer("Kurman","12/03/1900","Belgica",0,0,"Futuro Parado");
-/*array_push($jugadores,$entrenador);*/
+
 $equipo = new Team("Atletico del Madrid",$juagadores,"","","","","");
+$equipo->signPlayer($entrenador);
 
 function csvtoClass($archivo,$delimitador){
     if (!empty($archivo) && !empty($delimitador) && is_file($archivo)) {

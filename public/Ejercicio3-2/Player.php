@@ -1,5 +1,5 @@
 <?php
-require_once ('Member.php');
+
 class Player extends Member
 {
     private $dorsal;
@@ -59,4 +59,6 @@ class Player extends Member
                     </div>
                 </div>';
     }
+
+
 }

@@ -1,5 +1,5 @@
 <?php
-require_once ('Member.php');
+
 
 class Trainer extends Member
 {
@@ -7,10 +7,9 @@ class Trainer extends Member
 
     public function __construct($name, $birthday, $country, $yellowCard, $redCard,$charge)
     {
-        parent::__constructor($name, $birthday, $country, $yellowCard, $redCard);
+        parent::__construct($name, $birthday, $country, $yellowCard, $redCard);
         $this->charge = $charge;
     }
-
 
     public function render(){
         return '<div class="col mb-5">
@@ -19,7 +18,7 @@ class Trainer extends Member
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
-                        <div class="card-body p-4" style="background-color: yellow">
+                        <div class="card-body p-4" style="background-color: red">
                             <div class="text-center">
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">' . $this->name . '</h5>
@@ -29,7 +28,7 @@ class Trainer extends Member
                                 <!-- Product price-->
                                 <p>Edad: ' . $this->age() . '</p>
                                 <p>Country: ' . $this->country . '</p>
-                                <p>Dorsal: ' . $this->charge . '</p>
+                                <p>Charge: ' . $this->charge . '</p>
                                 <p>Tarjetas Rojas: ' . $this->redCard . '</p>
                                 <p>Tarjetas Amarillas: ' . $this->yellowCard . '</p>
                             </div>

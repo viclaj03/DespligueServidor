@@ -8,10 +8,10 @@ abstract class Member
     protected $yellowCard;
     protected $redCard;
 
-    public function __construct($name, $birthday, $country, $yellowCard, $redCard)
+    public function __construct($name, $birthDay, $country, $yellowCard, $redCard)
     {
         $this->name = $name;
-        $this->birthDay = $birthday;
+        $this->birthDay = $birthDay;
         $this->country = $country;
         $this->yellowCard = $yellowCard;
         $this->redCard = $redCard;
@@ -36,5 +36,7 @@ abstract class Member
     }
 
     public abstract function render();
+
+
 
 }
