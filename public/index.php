@@ -1,6 +1,6 @@
 <?php
     require_once("../kernel.php");
-    $greetings = 'Hola ' .$_GET['name'];
+    $greetings = 'Hola ' ;
     $names = ["jj","LL"];
     $names[] = 'Pepe';
     unset($names[1]);
