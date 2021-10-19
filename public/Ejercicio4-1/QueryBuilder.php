@@ -29,20 +29,15 @@ class QueryBuilder
     }
 
     public function insertAlumne($nomTaula,$datos) {
-        $dni = $datos->dni;
-        $nom = $datos->nom;
-        $dataNaiximent = $datos->dataNaiximent;
-        $sexe = $datos->sexe;
-        $hobby = $datos->hobby;
-        $foto = $datos->foto;
+
         $pdoSt = $this->conn->prepare("insert into $nomTaula  (dni,Nom,DataDeNaixement,Sexe,Hobby,Foto) VALUES (?,?,?,?,?,?)");
 
-        $pdoSt->bindParam(1,$dni);
-        $pdoSt->bindParam(2,$nom);
-        $pdoSt->bindParam(3,$dataNaiximent);
-        $pdoSt->bindParam(4,$sexe);
-        $pdoSt->bindParam(5,$hobby);
-        $pdoSt->bindParam(6,$foto);
+        $pdoSt->bindValue(1,$datos->dni);
+        $pdoSt->bindValue(2,$datos->nom);
+        $pdoSt->bindValue(3,$datos->dataNaiximent);
+        $pdoSt->bindValue(4,$datos->sexe);
+        $pdoSt->bindValue(5,$datos->hobby);
+        $pdoSt->bindValue(6,$datos->foto);
         $pdoSt->execute();
         return $pdoSt;
     }

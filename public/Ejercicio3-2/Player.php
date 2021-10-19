@@ -60,5 +60,4 @@ class Player extends Member
                 </div>';
     }
 
-
 }
