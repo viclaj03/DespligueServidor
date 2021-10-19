@@ -29,9 +29,7 @@ class QueryBuilder
     }
 
     public function insertAlumne($nomTaula,$datos) {
-
         $pdoSt = $this->conn->prepare("insert into $nomTaula  (dni,Nom,DataDeNaixement,Sexe,Hobby,Foto) VALUES (?,?,?,?,?,?)");
-
         $pdoSt->bindValue(1,$datos->dni);
         $pdoSt->bindValue(2,$datos->nom);
         $pdoSt->bindValue(3,$datos->dataNaiximent);

@@ -25,7 +25,7 @@ echo '<table border="1px solid black" ">
             echo '<td><img src="https://cache.desktopnexus.com/thumbseg/2294/2294267-bigthumbnail.jpg" alt="error" width="50" height="60" ></td> </tr>';
         } else{
 
-            echo '<td><img src="imagen/' .$alumno->Foto . '" alt="imagen" width="50" height="60" ></td> </tr>';
+            echo '<td><img src="' .$alumno->Foto . '" alt="imagen" width="50" height="60" ></td> </tr>';
         }
     }
 echo '</table>';
