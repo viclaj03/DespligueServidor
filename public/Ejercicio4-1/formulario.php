@@ -18,9 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
        }
         move_uploaded_file($_FILES['imagen']['tmp_name'],"imagen/$name" );
         $newAlumno = new Alumne($_POST['dni'],$_POST['nombre'],$_POST['birthday'],$_POST['genero'],$_POST['hobbies'],"imagen/" . $name);
-        $query->insertAlumne('alumnes',$newAlumno);
-        echo "Alumno añadido";
-        echo "<a href='mostrarTabla.php'> Ver tablas</a>";
+        try {
+            $query->insertAlumne('alumnes',$newAlumno);
+            echo "Alumno añadido";
+            echo "<a href='mostrarTabla.php'> Ver tablas</a>";
+        }catch (PDOException $e){
+            echo $e->getMessage();
+        }
 
 
     }
